@@ -1,0 +1,25 @@
+const {
+    contract_address,
+    counter_value,
+    recent_sender,
+    owner_address,
+    contract_balance,
+  } = useMainContract();
+
+<div>
+        <div>
+          <TonConnectButton />
+        </div>
+        <div>
+          <div className="Card">
+            <b>Our Contract Address</b>
+            <div className="Hint">{contract_address?.slice(0, 30) + "..."}</div>
+            <b>Our Contract Balance</b>
+            <div className="Hint">{contract_balance}</div>
+          </div>
+          <div className="Card">
+            <b>Counter Value</b>
+            <div>{counter_value ?? "loading..."}</div>
+          </div>
+        </div>
+      </div>
